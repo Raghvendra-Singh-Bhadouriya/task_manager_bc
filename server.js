@@ -12,7 +12,7 @@ const server = express()
 
 const allowedOrigins = [
   'http://localhost:5173',
-  //'https://singh-construction-design.vercel.app'
+  'https://task-manager-nine-sepia.vercel.app/'
 ];
 
 server.use(cors({
