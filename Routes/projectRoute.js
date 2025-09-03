@@ -5,7 +5,7 @@ import authMiddleware from "../Middleware/authMiddleware.js";
 const router = express.Router();
 
 // ================= Post Method to Upload Projects ================== //
-router.post("/add_project", authMiddleware, async (req, res) => {
+router.post("/add_project", async (req, res) => {
     try {
         const {title} = req.body;
 
