@@ -4,7 +4,7 @@ import bcrypt from "bcrypt";
 import express from "express";
 import authModel from "../Models/authSchema.js"
 import jwt from "jsonwebtoken";
-import blacklistModel from "../Models/blackListSchema.js";
+import blacklistModel from "../Models/blacklistSchema.js";
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {

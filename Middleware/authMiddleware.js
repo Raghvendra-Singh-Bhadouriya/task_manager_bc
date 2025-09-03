@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import jwt from "jsonwebtoken";
-import blacklistModel from "../Models/blackListSchema.js";
+import blacklistModel from "../Models/blacklistSchema.js";
 
 
 const authentication = async ( req, res, next ) => {
@@ -18,7 +18,7 @@ const authentication = async ( req, res, next ) => {
         const token = authHeader.split(" ")[1];
         if (!token) return res.status(401).json({ message: "No token provided" });
 
-        const blacklisted = await Blacklist.findOne({ token });
+        const blacklisted = await blacklistModel.findOne({ token });
         if (blacklisted) {
           return res.status(401).json({ message: "Token is invalid (logged out)" });
         }
