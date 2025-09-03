@@ -1,5 +1,5 @@
 import express from "express";
-import projectModel from "../Models/ProjectSchema.js";
+import projectModel from "../Models/projectSchema.js"
 import authMiddleware from "../Middleware/authMiddleware.js";
 
 const router = express.Router();
